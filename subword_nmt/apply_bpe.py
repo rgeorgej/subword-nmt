@@ -197,7 +197,7 @@ def create_parser(subparsers=None):
         metavar='PATH',
         help="Input file (default: standard input).")
     parser.add_argument(
-        '--codes', '-c', type=argparse.FileType('r'), metavar='PATH',
+        '--codes', '-c', type=argparse.FileType('r', encoding='utf-8'), metavar='PATH',
         required=True,
         help="File with BPE codes (created by learn_bpe.py).")
     parser.add_argument(
